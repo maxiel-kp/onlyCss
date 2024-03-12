@@ -1,0 +1,26 @@
+<style>
+    #youtubeLink:target {
+      display: block;
+    }
+  
+    #youtubeLink:target + #toggleLink, /* หรือใช้เฉพาะ #toggleLink ถ้าไม่มี sibling อื่นในระดับเดียวกัน */
+    #youtubeLink:not(:target) + #toggleLink {
+      display: none;
+    }
+  
+    #toggleLink {
+      display: block;
+    }
+  
+    #youtubeLink {
+      display: none;
+    }
+  </style>
+  
+  <div>
+    <a href="#youtubeLink" id="toggleLink">Show YouTube Link</a>
+    <div id="youtubeLink">
+      <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Go to YouTube</a>
+    </div>
+  </div>
+  

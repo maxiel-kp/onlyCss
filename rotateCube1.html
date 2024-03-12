@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Cube Animation with CSS</title>
+<style>
+  @keyframes rotateCube {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+
+  .cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 100px auto;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+  }
+
+  .face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 165, 0, 0.6);
+    border: 2px solid #FFF;
+  }
+
+  .front  { transform: translateZ(50px); }
+  .back   { transform: rotateY(180deg) translateZ(50px); }
+  .right  { transform: rotateY(90deg) translateZ(50px); }
+  .left   { transform: rotateY(-90deg) translateZ(50px); }
+  .top    { transform: rotateX(90deg) translateZ(50px); }
+  .bottom { transform: rotateX(-90deg) translateZ(50px); }
+</style>
+</head>
+<body>
+
+<div class="cube">
+  <div class="face front"></div>
+  <div class="face back"></div>
+  <div class="face right"></div>
+  <div class="face left"></div>
+  <div class="face top"></div>
+  <div class="face bottom"></div>
+</div>
+
+</body>
+</html>

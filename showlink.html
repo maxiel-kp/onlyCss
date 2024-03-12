@@ -1,0 +1,24 @@
+<style>
+    #youtubeLink {
+      display: none;
+    }
+  
+    #youtubeLink:target {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+  
+    /* ไม่สามารถเพิ่ม CSS ที่นี่เพื่อซ่อน #youtubeLink โดยอัตโนมัติหลังจากกลายเป็น :target */
+  </style>
+  
+  <a href="#youtubeLink">Show YouTube Link</a>
+  <!-- ลิงก์ที่นำไปสู่ส่วนอื่นของหน้า ซึ่งอาจใช้เพื่อ "ยกเลิก" การเป็น :target ของ #youtubeLink -->
+  <a href="#anotherSection">Hide YouTube Link</a>
+  
+  <div id="youtubeLink">
+    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">Go to YouTube</a>
+  </div>
+  
+  <!-- ส่วนอื่นของหน้า ซึ่งอาจเป็นเป้าหมายของลิงก์ที่ใช้ซ่อน #youtubeLink -->
+  <div id="anotherSection"></div>
+  
